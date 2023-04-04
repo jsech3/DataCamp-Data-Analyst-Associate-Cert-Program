@@ -62,4 +62,4 @@ visualization to:
 4. Describe the relationship between time to close and location. Your answer must
 include a visualization to demonstrate the relationship.
 
-### Answers & Outputs for Tasks 1-4 can be found in this repository under their respective number.
+## Answers & Outputs for Tasks 1-4 can be found in this repository under their respective number.
