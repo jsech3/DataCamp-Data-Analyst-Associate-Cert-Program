@@ -1,0 +1,6 @@
+  As we can see in the t4_box1 and t4_img, there is no significant difference between the means of these locations. 
+Because the p-value is 0.76, this is much higher than anything that would indicate a relationship between the two variables 
+(would be closer to 0 if so), so we must accept the null hypothesis. 
+The means of the four locations all fall within a range of four numbers, all being between 184 and 187 days of average time to close. 
+From this analysis of the variables, we deduce that there is no relationship between time to close and location, 
+and any sort of supposed correlation is likely by chance.
