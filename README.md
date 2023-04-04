@@ -1,5 +1,8 @@
 # DataCamp-Data-Analyst-Associate-Cert-Program
 Practical Exam for the DataCamp Data Analyst Associate Certificate Program
+Completed this after spending much time preparing and sharpening my skills through DataCamp's online learning platform. 
+
+My workspace is here: https://app.datacamp.com/workspace/w/30bccedc-0304-4568-8bd9-a3f80b8ccf93
 
 Instructions for Practical Exam: [DataCamp-DataAnalystAssociate-PracticalExam](https://github.com/jsech3/DataCamp-Data-Analyst-Associate-Cert-Program/files/11152471/DataCamp-DataAnalystAssociate-PracticalExam.pdf)
 
