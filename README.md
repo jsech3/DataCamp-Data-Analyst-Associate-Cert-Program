@@ -1,8 +1,7 @@
 # DataCamp-Data-Analyst-Associate-Cert-Program
 Practical Exam for the DataCamp Data Analyst Associate Certificate Program
 
-Instructions for Practical Exam: [Practical+-+DAA+-+Food+Claims+-+2212.pdf](https://github.com/jsech3/DataCamp-Data-Analyst-Associate-Cert-Program/files/11152423/Practical%2B-%2BDAA%2B-%2BFood%2BClaims%2B-%2B2212.pdf)
-
+Instructions for Practical Exam: [DataCamp-DataAnalystAssociate-PracticalExam](https://github.com/jsech3/DataCamp-Data-Analyst-Associate-Cert-Program/files/11152471/DataCamp-DataAnalystAssociate-PracticalExam.pdf)
 
 ## Practical Exam - Food Claims Process
 ### Instructions
