@@ -1,0 +1,54 @@
+## Task 4: Describe the relationship between time to close and location. Your answer must
+include a visualization to demonstrate the relationship.
+
+fig = px.box(df, x="location", y="time_to_close", 
+             labels={
+                 "location": "Location",
+                 "time_to_close": "Time to Close"
+             },
+             title="Box Plot of Time to Close across Location")
+fig.show()
+
+Output can be found in repository under 't4_box1'
+
+#Average time to close at each location 
+avgtime = df.groupby("location")["time_to_close"].mean()
+avgtime
+location
+FORTALEZA    185.305466
+NATAL        185.926829
+RECIFE       184.607910
+SAO LUIS     187.170213
+Name: time_to_close, dtype: float64
+
+#Breakdown of average time to close at each location by cause
+df.groupby(["location","cause"])["time_to_close"].mean()
+location   cause    
+FORTALEZA  meat         182.532544
+           unknown      197.094737
+           vegetable    171.446809
+NATAL      meat         184.211268
+           unknown      197.823529
+           vegetable    163.372093
+RECIFE     meat         180.793765
+           unknown      199.459627
+           vegetable    162.746575
+SAO LUIS   meat         183.458515
+           unknown      201.577320
+           vegetable    166.478723
+Name: time_to_close, dtype: float64
+
+#breakdown of median time to close at each location by cause
+df.groupby(["location", "cause"])["time_to_close"].median()
+
+pip install pingouin
+
+import pingouin
+alpha = 0.05
+pingouin.kruskal(data=df, dv='time_to_close', between='location')
+
+Kruskal
+Source: location
+ddof1: 3
+H: 1.1532225578
+p-unc: 0.7642439172
