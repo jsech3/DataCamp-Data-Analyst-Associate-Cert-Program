@@ -1,0 +1,13 @@
+Create a visualization that shows the number of claims in each location. Use the
+visualization to:
+
+a. State which category of the variable location has the most observations
+b. Explain whether the observations are balanced across categories of the
+variable location
+
+Visualization in Folder, labeled as 'Task 2 Vis'
+
+A. The category of the variable location with the highest amount of claims was 'RECIFE'.
+
+B. The observations are not balanced across categories of the variable location as 'RECIFE' appears to have nearly three times as many as 'NATAL'. 
+To optimize business and improve efficiency, this organization should try to look into why RECIFE has so many claims.
