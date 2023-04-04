@@ -1,0 +1,32 @@
+Task 3 - Describe the distribution of time to close for all claims. Your answer must include a
+visualization that shows the distribution.
+
+#Box Plot illustrating the breakdown of time to close and summary statistics
+
+fig = px.box(df, y="time_to_close")
+print(f'mean: {df.time_to_close.mean()}')
+print(f'median: {df.time_to_close.median()}')
+print(f'min: {df.time_to_close.min()}')
+print(f'max: {df.time_to_close.max()}')
+fig.show()
+
+Output can be found in folder, labeled 't3_box1.png'
+
+#Historgram illustrating the Distribution of Time to Close for All Claims
+
+fig = px.histogram(df, y="time_to_close", nbins=20, marginal="box",
+                  title="Distribution of Time to Close across Claims",
+                  width=750, labels ={'time_to_close': 'Time to Close'})
+print(f'mean: {df.time_to_close.mean()}')
+print(f'median: {df.time_to_close.median()}')
+print(f'min: {df.time_to_close.min()}')
+print(f'max: {df.time_to_close.max()}')
+fig.show()
+
+Output can be found in folder, labeled 't3_hist1.png'
+
+  The distribution of time to close for all claims can be seen through the histogram and box plot above. 
+The distribution of the time to close across all claims is not normal. We can see in the bins of the chart that many of the claims fell between 100-300 days mark. 
+Specifically, the 150-199 days bin had the highest number of occurrences with about 1,051 claims closing in that range. 
+From this, we can see that most claims are resolved between 100 and 300 days, with some clear outliers coming in on the longer end of the spectrum. 
+I've also included some summary statistics, which can also can be seen by hovering over the box plot on the right panel.
