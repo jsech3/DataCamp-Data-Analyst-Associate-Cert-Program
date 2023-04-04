@@ -6,6 +6,8 @@ My workspace is here: https://app.datacamp.com/workspace/w/30bccedc-0304-4568-8b
 
 Instructions for Practical Exam: [DataCamp-DataAnalystAssociate-PracticalExam](https://github.com/jsech3/DataCamp-Data-Analyst-Associate-Cert-Program/files/11152471/DataCamp-DataAnalystAssociate-PracticalExam.pdf)
 
+Dataset Used: Vivendo Brazilian Fast Food - Kaggle provided by DataCamp
+
 ## Practical Exam - Food Claims Process
 ### Instructions
 
