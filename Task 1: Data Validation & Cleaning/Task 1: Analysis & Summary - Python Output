@@ -1,0 +1,22 @@
+A. This dataset contains 2000 rows and 8 columns. Analysis of the values & columns below.
+
+There are 2000 unique Claim ID's and matches the description given.
+All values in Time_to_Close column are positive and there were no missing values.
+The claim_amount column was in object data type, so as a string, I changed it to a float data type.
+In the amount_paid column, there were 36 missing values, which I replaced with the overall median amount paid.
+There weren't any missing values in the location column, and the four values matched those given in the prompt.
+All values in the individuals_on_claim column had a minimum of 1 person on the claim and there weren't any missing values.
+In the linked_cases column, there were 26 missing values, which I replaced with "FALSE" in alignment with the instructions.
+The causes column contained some entries labeled "VEGETABLES" and "Meat", when the listed causes were "vegetable", "meat", or "unknown". 
+So I replaced "VEGETABLES" and "Meat" with the original, prescribed values "vegetable" and "meat" respectively. 
+There weren't any missing values here but if there were, they'd be replaced with "unknown."
+
+
+B. There were only 2 columns with missing values. 
+This was 'amount_paid' which had 36 missing values, and 'linked_cases' which had 26 missing values.
+
+C. How I updated the columns to match given description:
+  -To prepare the claim_amount column for analysis, I removed the string "R$" at the beginning of the values in the claim_amount column and then changed the type to float, converting it to numeric. 
+  -In the amount_paid column, I replaced all missing values with the overall median amount paid. -In the linked_cases column, I replaced all missing values with "FALSE". 
+  -In the cause column, there were some entries labeled "VEGETABLES" and "Meat", when the listed causes were "vegetable", "meat", or "unknown". So I replaced "VEGETABLES" and "Meat" with "vegetable" and "meat" respectively. 
+  -The remaining columns ('claim_id', 'time_to_close', 'location', and 'individuals_on_claim') matched the description and didn't need any updating or replacing.
