@@ -43,3 +43,83 @@ print(len(df['claim_id'].unique()))
 print(df['linked_cases'].unique())
 print(df['location'].unique())
 print(df['cause'].unique())
+
+
+Data Validation & Cleaning for each column
+
+# Validating Time to Close column
+print(f"Checking if there are negative values in time_to_close column: {(df.time_to_close < 0).sum()}")
+
+# Validating claim_amount column
+# This column indicates the Brazilian national currency. First, we need to replace this with a blankspace, then convert this string to float type. 
+df['claim_amount'] = df['claim_amount'].apply(lambda x: x.replace('R$ ', ''))
+df['claim_amount'] = df['claim_amount'].astype(float)
+print(f'\nChecking that all values in claim_amount column are positive: {(df.claim_amount > 0).all()}')
+
+# Validating amount_paid column
+# There were 36 missing values in the 'Amount_Paid' column so following the instructions I replaced those with the overall median amount paid
+median_amount_paid = df['amount_paid'].median()
+df['amount_paid'] = df['amount_paid'].fillna(value=median_amount_paid)
+print(f'\nChecking that all values in amount_paid are positive: {(df.amount_paid >= 0).all()}')
+
+# Validating Location column
+print(f'\nCategories of the location column: {df.location.unique()}')
+
+# Validating Individuals_on_Claim column
+print(f'\nChecking that all values in the individuals_on_claim column are positive: {(df.individuals_on_claim >= 0).all()}')
+
+# Validating Linked_Cases column
+# There are 26 missing values in the 'linked_cases' column, so here we will need to replace these with "FALSE"
+df['linked_cases'] = df['linked_cases'].fillna(value=False)
+print(f"\nChecking status options for the linked_cases column: {df['linked_cases'].unique()}")
+
+# Validating/Cleaning Causes Column
+# There are some edits that needed to be made. There were some causes listed as MEAT or VEGATABLES and that didn't align with the three given options of meat, vegetables, and unknown. So adjusting there.
+
+df.loc[df.cause == 'VEGETABLES', 'cause'] = 'vegetable'
+df.loc[df.cause == ' Meat', 'cause'] = 'meat'
+print(f'\nChecking categories in the causes column after amending: {df.cause.unique()}')
+Checking if there are negative values in time_to_close column: 0
+
+Checking that all values in claim_amount column are positive: True
+
+Checking that all values in amount_paid are positive: True
+
+Categories of the location column: ['RECIFE' 'FORTALEZA' 'SAO LUIS' 'NATAL']
+
+Checking that all values in the individuals_on_claim column are positive: True
+
+Checking status options for the linked_cases column: [False  True]
+
+Checking categories in the causes column after amending: ['unknown' 'meat' 'vegetable']
+
+
+# Verifying that columns have been updated
+# Verifying no missing values in any column
+df.info()
+df.isna().sum()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2000 entries, 0 to 1999
+Data columns (total 8 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   claim_id              2000 non-null   int64  
+ 1   time_to_close         2000 non-null   int64  
+ 2   claim_amount          2000 non-null   float64
+ 3   amount_paid           2000 non-null   float64
+ 4   location              2000 non-null   object 
+ 5   individuals_on_claim  2000 non-null   int64  
+ 6   linked_cases          2000 non-null   bool   
+ 7   cause                 2000 non-null   object 
+dtypes: bool(1), float64(2), int64(3), object(2)
+memory usage: 111.5+ KB
+claim_id                0
+time_to_close           0
+claim_amount            0
+amount_paid             0
+location                0
+individuals_on_claim    0
+linked_cases            0
+cause                   0
+dtype: int64
+
